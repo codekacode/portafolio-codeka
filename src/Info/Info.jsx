@@ -57,6 +57,7 @@ const Info = () => {
         <div className="credits"></div>
         <div className="color-mode"></div>
       </div>
+      <div className="copyright">Copyright © 2023 Codeka Code Co. All rights reserved.</div>
     </div>
   )
 }
