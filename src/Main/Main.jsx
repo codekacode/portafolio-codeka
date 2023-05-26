@@ -1,8 +1,11 @@
 import React from 'react'
+import Projects from '../Projects/Projects'
 
 function Main() {
   return (
-    <main>Main</main>
+    <main>
+      <Projects />
+    </main>
   )
 }
 

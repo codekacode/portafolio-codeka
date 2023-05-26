@@ -1,0 +1,55 @@
+.projectContainer a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: .02em;
+  line-height:.9em;
+  transition: color .5s, opacity .5s;
+  font-family: 'Lexend Zetta', sans-serif;
+  letter-spacing: -3px;
+
+}
+
+.projectContainer a::before {
+  content: attr(data-info);
+  white-space: pre;
+  position: absolute;
+  top: 3.7em;
+  left: -250px;
+  width: 200px;
+  text-align: right;
+  font-size: .7vw;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  color: #000!important;
+  pointer-events: none;
+  transition: none;
+}
+
+.projectContainer a::after {
+  content: "";
+  position: absolute;
+  top: 0.23em;
+  left: -0.3em;
+  width: 2px;
+  height: 0.85em;
+  background-color: #000;
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+.projectsLi {
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.projectContainer {
+  transform: rotateY(-45deg) translateZ(0) scale(1);
+  transform-origin: right center;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
