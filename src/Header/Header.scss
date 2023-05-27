@@ -1,0 +1,141 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header .logo {
+  display: block;
+  position: absolute;
+  bottom: calc(7.5vh + 67px);
+  left: 60px;
+  z-index: 1;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: .85em;
+  // font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: all .2s ease-in-out .05s,transform .5s cubic-bezier(.86,0,.07,1) .25s;
+  color: #fff;
+}
+
+.header .logo .slideUp {
+  padding-bottom: 2px;
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header a {
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+}
+
+.header a , .header button.link {
+  color: #000;
+}
+
+.header a:not(.logo), .header button.link {
+  color: #f2f2f2;
+}
+
+.header .contact,.header .info,.header .info-left,.header .info-right,.header .social {
+  display: -ms-flexbox;
+  display: flex
+}
+
+.header .info-left {
+  width: 70%;
+  display: flex;
+}
+
+.header .info-left,.header .info-right {
+  -ms-flex-align: end;
+  align-items: flex-end
+}
+
+.header .info-right {
+  position: relative;
+  width: 30%;
+  max-width: 250px;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+
+.header .copyright {
+  position: absolute;
+  bottom: 22px;
+  left: 60px;
+  width: 50%;
+  font-size: 10px;
+  color: #000;
+  opacity: .25;
+  transition: opacity .5s
+}
+
+.header .info {
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  width: 100vw;
+  padding: 2.5vh 60px 5vh;
+  transition: opacity .2s ease-in-out
+}
+
+
+.header .info a,.header .info button.link {
+  display: inline-block;
+  position: relative;
+  transform: rotateY(0deg) translateZ(0);
+  transform-origin: left center;
+  transition: all .25s cubic-bezier(.175,.885,.32,1.275)
+}
+
+.header .info li {
+  perspective: 250px;
+  perspective-origin: 0
+}
+
+.header .info li:hover a,.header .info li:hover button.link {
+  transform: rotateY(15deg) translateZ(0)
+}
+
+.header .contact {
+  display: flex;
+  color: #f2f2f2;
+  font-family: 'Jost', sans-serif;
+}
+
+.header .contact ul {
+    margin-right: 3vw;
+}
+
+// .header .links .about-li::after,.header .links .journal-li::after {
+//   content: "";
+//   pointer-events: none;
+//   position: absolute;
+//   top: 50%;
+//   left: calc(100% + 15px);
+//   transform: translateY(-50%);
+//   width: 40px;
+//   height: 2px;
+//   border-radius: 1px;
+//   background-color: #000;
+//   transform-origin: left center;
+//   transform: scaleX(0) translateZ(0);
+//   transition: transform .25s cubic-bezier(.895,.03,.685,.22) 0s
+// }

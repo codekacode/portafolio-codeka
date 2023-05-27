@@ -1,0 +1,27 @@
+.info {
+  justify-content: space-between ;
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none
+  }
+
+  li {
+    margin-bottom: 5px;
+
+    span {
+      margin-right: 15px;
+      font-size:10px;
+    }
+  }
+}
+
+button.link {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Jost', sans-serif;
+}

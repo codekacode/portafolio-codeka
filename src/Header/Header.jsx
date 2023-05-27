@@ -1,9 +1,10 @@
 import React from 'react'
 import Info from '../Info/Info'
+import './Header.scss'
 
 function Header() {
   return (
-    <header>
+    <header className="header">
       <a class="logo" href="/">
         <span class="slideUp">
           <span>Codeka</span> 

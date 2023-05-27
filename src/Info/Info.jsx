@@ -1,9 +1,9 @@
 import React from "react";
-import './Info.css';
+import './Info.scss';
 
 const Info = () => {
   return (
-    <div>
+    <div className="info">
       <div className="info-left">
         <div className="contact">
           <ul>
