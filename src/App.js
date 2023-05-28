@@ -1,13 +1,13 @@
 import './App.css';
 import Header from './Header/Header';
-import Main from './Main/Main';
+import WraperPage from './WraperPage/WraperPage';
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="home-page">
       <Header />
-      <Main />
+      <WraperPage />
     </div>
   );
 }
