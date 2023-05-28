@@ -15,7 +15,7 @@
   bottom: calc(7.5vh + 67px);
   left: 60px;
   z-index: 1;
-  font-family: 'Jost', sans-serif;
+  font-family: Druk Wide Web;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -29,7 +29,24 @@
   transform: translateZ(0);
   transition: all .2s ease-in-out .05s,transform .5s cubic-bezier(.86,0,.07,1) .25s;
   color: #fff;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.2s ease-in-out 0.05s, -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.25s;
+  transition: all 0.2s ease-in-out 0.05s, -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.25s;
+  transition: all 0.2s ease-in-out 0.05s, transform 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.25s;
+  transition: all 0.2s ease-in-out 0.05s, transform 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.25s, -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.25s; 
 }
+
+  // @supports (-webkit-text-stroke: 1px #000) or (text-stroke: 1px #000) {
+  //   .header .logo {
+  //     -webkit-text-stroke: 1px #000;
+  //     text-stroke: 1px #000;
+  //   }
+  // }
+
+
 
 .header .logo .slideUp {
   padding-bottom: 2px;
@@ -139,3 +156,123 @@
 //   transform: scaleX(0) translateZ(0);
 //   transition: transform .25s cubic-bezier(.895,.03,.685,.22) 0s
 // }
+
+@supports (-webkit-text-stroke:2px #000) or (text-stroke:2px #000) {
+  .header .logo:hover {
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    text-stroke: 2px #fff;
+  }
+}
+
+// animations
+
+.slideUp span {
+  display: block;
+  -webkit-transform: translateY(120%);
+          transform: translateY(120%);
+  -webkit-animation: slideUp 1s forwards;
+          animation: slideUp 1s forwards; }
+
+.slideUp:nth-child(2) span {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+.slideUp:nth-child(3) span {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s; }
+
+.home-page .slideUp span {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s; }
+
+.home-page .slideUp:nth-child(2) span {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s; }
+
+.home-page .slideUp:nth-child(3) span {
+  -webkit-animation-delay: 2.35s;
+          animation-delay: 2.35s; }
+
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(120%);
+            transform: translateY(120%); }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(120%);
+            transform: translateY(120%); }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+/* Header */
+.header .contact ul,
+.header .links,
+.header .social,
+.header .credits {
+  opacity: 0;
+  -webkit-transform: translateY(-101%);
+          transform: translateY(-101%);
+  -webkit-animation: slideUpFadeIn 1s 0.4s forwards;
+          animation: slideUpFadeIn 1s 0.4s forwards; }
+
+.header .contact ul:nth-child(2) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; }
+
+.header .social {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+
+.header .credits {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s; }
+
+@-webkit-keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+.home-page .header .contact ul,
+.home-page .header .links,
+.home-page .header .social,
+.home-page .header .credits {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s; }
+
+.home-page .header .contact ul:nth-child(2) {
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s; }
+
+.home-page .header .links {
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s; }
+
+.home-page .header .social {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s; }
+
+.home-page .header .credits {
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s; }

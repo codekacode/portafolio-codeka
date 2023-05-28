@@ -1,9 +1,10 @@
 import React from 'react'
 import Projects from '../Projects/Projects'
+import './Main.css'
 
 function Main() {
   return (
-    <main>
+    <main className="stage">
       <Projects />
     </main>
   )

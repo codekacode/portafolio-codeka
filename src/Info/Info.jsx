@@ -54,8 +54,14 @@ const Info = () => {
             </li>
           </ul>
         </div>
-        <div className="credits"></div>
-        <div className="color-mode"></div>
+        {/* <div className="credits"></div> */}
+        <div className="color-mode">
+          <div className="dot"></div>
+          <button className="night-mode" aria-labe="Night Colot Mode"></button>
+          <button className="light-mode" aria-labe="Light Colot Mode"></button>
+          <button className="ultra-mode" aria-labe="Ultra Colot Mode"></button>
+          <div className="circle"></div>
+        </div>
       </div>
       <div className="copyright">Copyright © 2023 Codeka Code Co. All rights reserved.</div>
     </div>

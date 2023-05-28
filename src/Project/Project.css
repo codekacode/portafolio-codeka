@@ -4,20 +4,31 @@
 }
 
 .projectContainer {
-  transform: rotateY(-45deg) translateZ(0) scale(1);
-  transform-origin: right center;
-  transform-style: preserve-3d;
-  will-change: transform;
-
+  -webkit-transform: rotate3d(0, 1, 0, -45deg) translateZ(0) scale(1);
+          transform: rotate3d(0, 1, 0, -45deg) translateZ(0) scale(1);
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  will-change: transform; }
   @media screen and (min-width: 768px) {
-    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
+    .home-page .projectContainer {
+      -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: -webkit-transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
 }
 
-.projectsLi:hover  {
+.home-page:not(.intro) .projectsLi:hover .projectContainer,
+.home-page:not(.intro) .projectsLi.isHovered .projectContainer {
+  -webkit-transform: rotate3d(0, 1, 0, -35deg) translateZ(0) scale(1);
+          transform: rotate3d(0, 1, 0, -35deg) translateZ(0) scale(1);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s; }
+/* .projectsLi:hover  {
   transform: rotate3d(0, 1, 0, -35deg) translateZ(0) scale(1);
   transition-duration: 1s;
-}
+} */
 
 .projectsLi a:hover {
   transition-duration: 0.3s;
@@ -41,16 +52,16 @@
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  letter-spacing: .02em;
+  /* letter-spacing: .02em; */
   line-height:.9em;
   transition: color .5s, opacity .5s;
-  font-family: 'Jost', sans-serif;
+  font-family: Druk Wide Web;
   font-size: 9.6vw;
   /* letter-spacing: -1px; */
 
 }
 
-.projectContainer a::before {
+.projects a::before {
   content: attr(data-info);
   white-space: pre;
   position: absolute;
@@ -67,7 +78,13 @@
   transition: none;
 }
 
-.projectContainer a::after {
+@supports (-webkit-text-stroke: 3px #000) or (text-stroke: 3px #000) {
+  .projects a:before {
+    -webkit-text-stroke: transparent;
+    text-stroke: transparent; }
+}
+
+.projects a::after {
   content: "";
   position: absolute;
   top: 0.23em;
@@ -75,7 +92,7 @@
   width: 2px;
   height: 0.85em;
   background-color: #000;
-  transform: rotate(25deg);
+  transform: rotateZ(25deg);
   pointer-events: none;
 }
 
