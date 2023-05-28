@@ -1,0 +1,37 @@
+.home-page .stagePerspective {
+  position: relative;
+  width: 100%;
+  perspective: 100vw
+}
+
+/* .home-page:not(.isMobile) .stagePerspective {
+  position: relative;
+  width: 100%;
+  -webkit-perspective: 100vw;
+          perspective: 100vw;
+  overflow-y: auto;
+} */
+
+.home-page:not(.isMobile) .stagePerspective {
+  height: 100vh;
+  /* overflow-x: hidden; */
+  overflow-y: auto; 
+}
+
+.home-page .stageContainer {
+  position: relative;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  /* -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; */
+}
+
+.parallax-horizontal-tb-bt {
+  -webkit-transform: translateX(var(--transform-x));
+          transform: translateX(var(--transform-x));
+  -webkit-transition: -webkit-transform 3s ease-out;
+  transition: -webkit-transform 3s ease-out;
+  transition: transform 3s ease-out;
+  transition: transform 3s ease-out, -webkit-transform 3s ease-out; 
+}
